@@ -19,7 +19,7 @@ def train(training_inputs, training_outputs, training_iterations):
     global synaptic_weights
     for iteration in range(training_iterations):
         
-        output = think(training_inputs)
+        output = base(training_inputs)
         
         error = training_outputs - output
         
@@ -52,7 +52,7 @@ C = str(input("Input 3: "))
     
 print("New situation: input data = ", A, B, C)
 print("Output data: ")
-print(think(np.array([A, B, C])))
+print(base(np.array([A, B, C])))
 
 """
 input 1: 1
