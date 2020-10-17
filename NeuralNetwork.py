@@ -62,5 +62,5 @@ input 3: 0
 output:
 somthing close to 1
 
-The neural network learns that if there is a 1 in the first colum, that the output should be 1
+The neural network learns that if there is a 1 in the first column, that the output should be 1
 """
