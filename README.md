@@ -107,7 +107,8 @@ base(np.array([A, B, C]))
  
 ```input 1: 1
 input 2: 0
-input 3: 0```
+input 3: 0
+```
 output:
 something close to 1
 The neural network learns that if there is a 1 in the first column, that the output should be 1
