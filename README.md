@@ -34,7 +34,7 @@ The activation function is a crucial component in a neuron. All it does is deter
 But in this case we'll use a sigmoid function.
 
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}})
-<img src="sigmoid.png"/>
+<img src="img/sigmoid.png"/>
 
 
 ```python
