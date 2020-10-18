@@ -17,12 +17,10 @@ synaptic_weights = 2 * np.random.random((3, 1)) - 1
 Next, we have to decide on an activation function. The top three are: `Sigmoid`, `TanH`, and `RelU`
  
 But in this case we'll use a sigmoid function.
-```math
-\frac{\mathrm{1}}{\mathrm{1}+e^{-x}}
-```
+
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}})
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}}">
+
 ```python
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
