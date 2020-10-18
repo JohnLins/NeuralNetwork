@@ -1,7 +1,17 @@
 ## NN From Scratch
 # How to make a Neural Network from scratch in Python
  
-In this workshop you will learn how to create a neural network in python that learns how to predict that if there is a `1` in the first column of a vector, that the output should be `1` and otherwise `zero`
+In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
+
+In this case, it's supposed to learn that if there is a `1` in the first column of a vector, that the output should be `1` and otherwise a `zero`
+
+The following NN is not supposed to be practical, it is supposed to serve as a framework for your next project. I highly recommend forking this code and modifying it on your own, that is the best way to learn.
+
+
+
+In this worshop you will see some very basic linear algebra concepts such as the Dot product and the transpose operation. You don't need a deep understanding of linear algebra to create basics neural networks like this, but if it sparks your intest, I recommend watching a short (linear algebra series)[https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab] from 3b1b.
+
+#Getting started
  
 To get started, we must import numpy
 ```python
@@ -13,6 +23,10 @@ np.random.seed(1)
  
 synaptic_weights = 2 * np.random.random((3, 1)) - 1
 ```
+
+<img src="weights.png"/>
+
+# Activation Functions
  
 Next, we have to decide on an activation function. The top three are: `Sigmoid`, `TanH`, and `RelU`
 
@@ -74,6 +88,11 @@ As you can see in the function above, `error = training_outputs - output ` calcu
 This line here, `adjustments = np.dot(training_inputs.T, error * sigmoid_derivative(output))` calculates the adjustments to the weights (The backpropagation I was talking about)
  
 Which you can see change here: `synaptic_weights += adjustments`
+
+# What is BackPropagation?
+Backpropagation is the process of tweaking the weights, remember how the weights were random in the beginning? Well, now we are artificially changing the weight values.
+
+<img src="backprop.png"/>
  
  
 # Training it
