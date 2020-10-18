@@ -20,6 +20,9 @@ But in this case we'll use a sigmoid function.
 ```math
 \frac{\mathrm{1}}{\mathrm{1}+e^{-x}}
 ```
+![formula](https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}})
+
+<img src="https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}}">
 ```python
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
