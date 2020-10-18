@@ -18,7 +18,7 @@ Next, we have to decide on an activation function. The top three are: `Sigmoid`,
  
 But in this case we'll use a sigmoid function.
 ```math
-$$ \frac{\mathrm{1} }{\mathrm{1} + e^{-x}} $$
+\frac{\mathrm{1}}{\mathrm{1}+e^{-x}}
 ```
 ```python
 def sigmoid(x):
