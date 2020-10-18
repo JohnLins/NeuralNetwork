@@ -15,6 +15,8 @@ synaptic_weights = 2 * np.random.random((3, 1)) - 1
 ```
  
 Next, we have to decide on an activation function. The top three are: `Sigmoid`, `TanH`, and `RelU`
+
+The activation function is a crucial component in a neuron. All it does is determine if a neuron should fire or not. When a neuron fires, that just means that it's value will go on to the next layer.
  
 But in this case we'll use a sigmoid function.
 
@@ -27,11 +29,14 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 ```
  
-And we will always need the derivative:
+And we will always need the derivative of our activation function:
 ```python
 def sigmoid_derivative(x):
     return x * (1 - x)
 ```
+The derivative will be later multiplied by the error when calculating the adjustment values.
+
+For those of you who are not fond calculus, all the "derivative" does essentially find the slope of any function.
  
 Now let's create a neuron in the function which we'll call `base`
 ```python
