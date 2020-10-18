@@ -25,9 +25,9 @@ The following NN is not supposed to be practical, it is supposed to serve as a f
 - [Activation-Functions](#Activation-Functions)
 - [Train](#Train)
 - [What is BackPropagation?](#What-is-BackPropagation?)
-- [Training it](#Training it)
+- [Training it](#Training-it)
 - [Get The Results!](#Get-The-Results!)
-- [Final Code](#Final code)
+- [Final Code](#Final-code)
 
 
 
