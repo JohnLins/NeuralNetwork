@@ -1,4 +1,4 @@
-# How to make a Neural Network from scratch in Python
+## How to make a Neural Network from Scratch in Python
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
 
@@ -8,7 +8,7 @@ The following NN is not supposed to be practical, it is supposed to serve as a f
 
 
 
-In this worshop you will see some very basic linear algebra concepts such as the Dot product and the transpose operation. You don't need a deep understanding of linear algebra to create basics neural networks like this, but if it sparks your intest, I recommend watching a short (linear algebra series)[https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab] from 3b1b.
+In this worshop you will see some very basic linear algebra concepts such as the Dot product and the transpose operation. You don't need a deep understanding of linear algebra to create basics neural networks like this, but if it sparks your intest, I recommend watching a short (https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)[linear algebra series] from 3b1b.
 
 #Getting started
  
@@ -23,7 +23,7 @@ np.random.seed(1)
 synaptic_weights = 2 * np.random.random((3, 1)) - 1
 ```
 
-<img src="weights.png"/>
+<img src="img/weights.png"/>
 
 # Activation Functions
  
@@ -91,7 +91,7 @@ Which you can see change here: `synaptic_weights += adjustments`
 # What is BackPropagation?
 Backpropagation is the process of tweaking the weights, remember how the weights were random in the beginning? Well, now we are artificially changing the weight values.
 
-<img src="backprop.png"/>
+<img src="img/backprop.png"/>
  
  
 # Training it
@@ -136,7 +136,7 @@ output:
 something close to 1
 The neural network learns that if there is a 1 in the first column, that the output should be 1
  
-<img src="screenshot.png">
+<img src="img/screenshot.png">
  
  
 View code here: [https://github.com/JohnLins/NeuralNetwork](https://github.com/JohnLins/NeuralNetwork)
