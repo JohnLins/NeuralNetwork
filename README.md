@@ -1,3 +1,11 @@
+GitHub @johnlins):
+
+---
+name: 'How to make a Neural Network from Scratch in Python'
+description: '*Learn* the correct numerical output'
+author: '@MatthewStanciu'
+---
+
 ## How to make a Neural Network from Scratch in Python
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
