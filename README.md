@@ -12,6 +12,23 @@ In this case, it's supposed to learn that if there is a `1` in the first column 
 
 The following NN is not supposed to be practical, it is supposed to serve as a framework for your next project. I highly recommend forking this code and modifying it on your own, that is the best way to learn.
 
+[**Live Demo**](https://repl.it/@JohnLins/NeuralNetwork)
+
+[**Final Code**](https://github.com/JohnLins/NeuralNetwork)
+
+---
+
+
+## Table of contents:
+
+- [Getting Started(Initializing weights)](#Getting-started)
+- [Activation-Functions](#Activation-Functions)
+- [Train](#Train)
+- [What is BackPropagation?](#What-is-BackPropagation?)
+- [Training it](#Training it)
+- [Get The Results!](#Get-The-Results!)
+- [Final Code](#Final code)
+
 
 
 In this worshop you will see some very basic linear algebra concepts such as the Dot product and the transpose operation. You don't need a deep understanding of linear algebra to create basics neural networks like this, but if it sparks your intest, I recommend watching a short linear algebra series from 3b1b: https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
