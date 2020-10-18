@@ -1,9 +1,7 @@
-GitHub @johnlins):
-
 ---
 name: 'How to make a Neural Network from Scratch in Python'
 description: '*Learn* the correct numerical output'
-author: '@MatthewStanciu'
+author: '@johnlins'
 ---
 
 ## How to make a Neural Network from Scratch in Python
