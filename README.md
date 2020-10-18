@@ -19,6 +19,7 @@ Next, we have to decide on an activation function. The top three are: `Sigmoid`,
 But in this case we'll use a sigmoid function.
 
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}})
+<img src="sigmoid.png"/>
 
 
 ```python
@@ -111,7 +112,7 @@ output:
 something close to 1
 The neural network learns that if there is a 1 in the first column, that the output should be 1
  
-<img src="https://github.com/JohnLins/NeuralNetwork/blob/master/screenshot.png">
+<img src="screenshot.png">
  
  
 View code here: [https://github.com/JohnLins/NeuralNetwork](https://github.com/JohnLins/NeuralNetwork)
