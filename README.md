@@ -1,4 +1,3 @@
-## NN From Scratch
 # How to make a Neural Network from scratch in Python
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
