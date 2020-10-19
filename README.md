@@ -9,7 +9,7 @@ img: 'img/final.png'
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
 
-In this case, it's supposed to learn that if there is a `1` in the first column of a vector, that the output should be `1` and otherwise a `zero`
+In this case, it's supposed to learn to output a value that is close to the training output value.
 
 The following NN is not supposed to be practical, it is supposed to serve as a framework for your next project. I highly recommend forking this code and modifying it on your own, that is the best way to learn.
 
@@ -160,7 +160,7 @@ input 3: 0
 Output:
 Something close to 1, for example `[0.99993704]`
 
-The neural network learns that if there is a 1 in the first column, that the output should be 1
+The neural network learns that if the inputs are [1,1,1], [1,0,1], or [1,0,0] that the output is 1, and otherwise 0.
  
 <img src="img/screenshot.png">
  
