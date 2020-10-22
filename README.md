@@ -73,7 +73,7 @@ def sigmoidDerivative(x):
 ```
 The derivative will be later multiplied by the error when calculating the adjustment values.
 
-For those of you who are not fond calculus, all the "derivative" does essentially find the slope of any function.
+For those of you who are not fond of calculus, all the "derivative" does essentially is find the slope of any function.
  
 Now let's create a neuron in the function which we'll call `base`
 ```python
