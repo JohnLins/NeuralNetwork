@@ -9,7 +9,7 @@ img: 'https://hackclub.slack.com/files/U010VMPCEBF/F01DLN2LDHN/screenshot.png?or
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
 
-In this case, it's supposed to learn to output a value that is close to the training output value.
+In this case, it's supposed to return a value close to either `0` or `1` given 3 input values according to the training data.
 
 The following NN is not supposed to be practical, it is supposed to serve as a framework for your next project. I highly recommend forking this code and modifying it on your own, that is the best way to learn.
 
