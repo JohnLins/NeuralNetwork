@@ -1,11 +1,10 @@
 ---
-name: 'How to make a Neural Network from Scratch in Python'
-description: '*Learn* the correct numerical output'
+name: 'Neural Network from Scratch'
+description: 'How to build a neural network from scratch in python'
 author: '@johnlins'
-img: 'https://hackclub.slack.com/files/U010VMPCEBF/F01DLN2LDHN/screenshot.png?origin_team=T0266FRGM&origin_channel=D010V8S08G4'
+img: 'https://cloud-o368n9khl.vercel.app/0cover.png'
 ---
-
-## How to make a Neural Network from Scratch in Python
+# How to make a Neural Network from Scratch in Python
  
 In this workshop you will learn how to create a neural network in python that learns the appropriate numerical output given 3 boolean values.
 
@@ -20,7 +19,7 @@ The following NN is not supposed to be practical, it is supposed to serve as a f
 ---
 
 
-## Table of contents:
+# Table of contents:
 
 - [Getting Started(Initializing weights)](#Getting-started)
 - [Activation-Functions](#Activation-Functions)
@@ -28,7 +27,10 @@ The following NN is not supposed to be practical, it is supposed to serve as a f
 - [What is BackPropagation?](#What-is-BackPropagation?)
 - [Training it](#Training-it)
 - [Get The Results!](#Get-The-Results!)
+- [Why Are We Getting This Output?](#Why-Are-We-Getting-This-Output?)
 - [Final Code](#Final-code)
+- [Hack it!](#How-to-Hack-it!)
+
 
 
 
@@ -47,7 +49,7 @@ np.random.seed(1)
 synapticWeights = 2 * np.random.random((3, 1)) - 1
 ```
 
-<img src="img/weights.png"/>
+<img src="https://cloud-hdp8sg9gd.vercel.app/0weights.png" alt="weights in a neural network"/>
 
 # Activation Functions
  
@@ -58,7 +60,7 @@ The activation function is a crucial component in a neuron. All it does is deter
 But in this case we'll use a sigmoid function.
 
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{\mathrm{1}}{\mathrm{1}+e^{-x}})
-<img src="img/sigmoid.png"/>
+<img src="https://cloud-mppwtn9tr.vercel.app/0sigmoid.png" alt="The sigmoid activation function"/>
 
 
 ```python
@@ -115,7 +117,7 @@ Which you can see change here: `synaptic_weights += adjustments`
 # What is BackPropagation?
 Backpropagation is the process of tweaking the weights, remember how the weights were random in the beginning? Well, now we are artificially changing the weight values.
 
-<img src="img/backprop.png"/>
+<img src="https://cloud-768iz6otd.vercel.app/0backprop.png" alt="Back Propagation"/>
  
  
 # Training it
@@ -136,6 +138,16 @@ Then I will pass this through the train function:
 ```python
 train(trainingInputs, trainingOutputs, 10000)
 ```
+
+# How To Run
+If you cloned it on your computer, just make sure you've installed Numpy and run:
+`cd /NeuralNetwork`
+<br/>
+`python NeuralNetwork.py`
+
+If you are running the NN on repl (Using the link above), simply hit the run button on the top of the screen.
+Sometimes it may ask you to configure your run button, if that's the case, set it to `python3 NeuralNetwork.py` and it should work.
+
  
 # Get The Results!
  
@@ -152,17 +164,42 @@ And finally we will pass it through our network!!!
 base(np.array([input1, input2, input3]))
 ```
  
+In this case, I will input these numbers:
 ```
 input 1: 1
 input 2: 0
-input 3: 0
+input 3: 1
 ```
+<img src="https://cloud-9oczrmwv9.vercel.app/0image.png" alt="Final result">
 Output:
-Something close to 1, for example `[0.99993704]`
+Something close to 1, for example `[0.99358931]`
+
+Note that our neural network will never output exactly 1, i'll leave it up to you to figure out why.
+
+# Why Are We Getting This Output?
 
 The neural network learns that if the inputs are [1,1,1], [1,0,1], or [1,0,0] that the output is 1, and otherwise 0.
- 
-<img src="img/screenshot.png">
+
+This is due to out training data... Yes, we told it to do that!
+
+To help visualize what the training data is saying, I have created a table:
+| **Inputs** | **Outputs** |
+|-|-|
+| [0,0,1] | 0 |
+| [1,1,1] | 1 |
+| [1,0,1] | 1 |
+| [0,1,1] | 0 |
+
+Can you see it in the code now?
+```python
+trainingInputs = np.array([[0,0,1],
+                            [1,1,1],
+                            [1,0,1],
+                            [0,1,1]])
+
+trainingOutputs = np.array([[0,1,1,0]]).T
+``` 
+
  
  
 View code here: [https://github.com/JohnLins/NeuralNetwork](https://github.com/JohnLins/NeuralNetwork)
@@ -230,8 +267,24 @@ print(base(np.array([input1, input2, input3])))
 ```
 
 
+# How to Hack it!
 
-# Run
-`cd /NeuralNetwork`
-<br/>
-`python NeuralNetwork.py`
+The easiest way to experiment and learn is by changing up the training data. See if you can teach it something new!
+Maybe try inversing the output data like this:
+```python
+trainingOutputs = np.array([[1,0,0,1]]).T
+```
+
+Additionally, try changing the activation function to something else. Maybe tanH or ReLU! See if the output differs!
+
+Here is the code for ReLU
+```python
+def relu(x):
+	return max(0.0, x)
+ ```
+ 
+Don't forget that you must change the derivative accordingly!
+In fact, that's another great way to experiment!
+
+View a [full list of popular activation functions](https://en.wikipedia.org/wiki/Activation_function) with their derivatives here.
+
